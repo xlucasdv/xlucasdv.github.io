@@ -220,3 +220,51 @@ section.topo-do-site .flex{
     margin: 0; /* Remove as margens externas */
     padding: 0; /* Remove os preenchimentos internos */
 }
+
+/* Exemplo com Flexbox */
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: space-between;
+  }
+  
+  .item {
+    flex: 1 1 calc(33.333% - 10px); /* 3 itens por linha */
+    margin: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .item {
+      flex: 1 1 calc(50% - 10px); /* 2 itens por linha */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .item {
+      flex: 1 1 100%; /* 1 item por linha */
+    }
+  }
+  img, video {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção */
+  }
+/* Estilos padrão para desktops */
+body {
+    font-size: 16px;
+    margin: 20px;
+  }
+  
+  /* Estilos para telas menores (como tablets e celulares) */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+      margin: 10px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+      margin: 5px;
+    }
+  }
